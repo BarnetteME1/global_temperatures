@@ -9,6 +9,6 @@ gt$dt <- as.Date(gt$dt, format = "%Y-%m-%d")
 
 ggplot(aes(x = dt, y = LandAverageTemperature), data = gt) + 
   geom_line() + 
-  scale_x_date(limits = c(as.Date("1750-01-01", "1800-12-01")))
+  scale_x_date(date_breaks = '10 years', limits = as.Date(c("1750-01-01", "1800-01-01")))
 
-?scale_x_date
+summary(gt)
